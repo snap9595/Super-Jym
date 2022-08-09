@@ -1,0 +1,7 @@
+.body {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  min-height: 100vh;
+  padding: 0;
+}
