@@ -1,0 +1,15 @@
+.nav {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.nav a {
+  font-weight: 700;
+  font-family: $ff-bebas-neue;
+  font-size: 1.63rem;
+  line-height: 100%;
+  letter-spacing: 0.03em;
+  color: $color-default-white;
+}

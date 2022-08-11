@@ -2,6 +2,23 @@
   background-color: $color-russian-black;
 }
 
-.footer a {
+.footer__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+.footer__wrap a {
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: $color-default-white;
+}
+
+.footer__wrap ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  column-gap: 20px;
 }

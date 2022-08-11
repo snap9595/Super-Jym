@@ -2,6 +2,7 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "../../node_modules/swiper/swiper.scss";
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
@@ -20,7 +21,19 @@
 
 @import "blocks/body";
 @import "blocks/main";
+@import "blocks/nav";
 @import "blocks/subscription";
+@import "blocks/gym";
+@import "blocks/description";
 @import "blocks/tickets";
+@import "blocks/cross-fit";
+@import "blocks/coachs";
 @import "blocks/advantages";
+@import "blocks/season-ticket";
+@import "blocks/reviews";
+@import "blocks/about-us";
+@import "blocks/form";
+@import "blocks/contacts";
 @import "blocks/footer";
+@import "blocks/footer-nav";
+@import "blocks/social";

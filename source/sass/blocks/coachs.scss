@@ -1,0 +1,42 @@
+.coachs {
+  position: relative;
+  margin-bottom: 120px;
+}
+
+.coachs h3 {
+  font-family: $ff-bebas-neue;
+  font-size: 3.07rem;
+  line-height: 100%;
+  letter-spacing: 0.03em;
+}
+
+.coachs__wrap article {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  height: 294px;
+  position: relative;
+  background-color: $color-sapphire-blue--89;
+}
+
+.coachs__wrap h4 {
+  font-weight: 700;
+  font-size: 1.13rem;
+  line-height: 150%;
+  color: $color-default-white;
+}
+
+.coachs__wrap span {
+  line-height: 150%;
+  color: $color-spindle-grey;
+}
+
+.coachs__wrap ul {
+  padding: 0;
+}
+
+.coachs__wrap li {
+  font-size: 0.88rem;
+  line-height: 150%;
+  color: $color-default-white;
+}

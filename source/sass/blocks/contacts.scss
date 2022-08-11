@@ -1,0 +1,62 @@
+.contacts {
+  justify-self: center;
+  width: 100%;
+}
+
+.contacts h3 {
+  margin-top: 70px;
+  margin-left: 120px;
+  margin-bottom: 57px;
+  text-align: left;
+}
+
+.contacts ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 70px;
+  padding: 0;
+  margin: 0;
+  margin-left: 120px;
+  list-style: none;
+
+  @include vp-1199 {
+    margin-left: 0;
+    padding-left: 130px;
+    padding-right: 160px;
+  }
+}
+
+.contacts li {
+  min-width: 100%;
+}
+
+.contacts h4 {
+  margin: 0;
+  margin-bottom: 15px;
+  line-height: 150%;
+}
+
+.contacts address {
+  font-style: normal;
+  margin-bottom: 17px;
+}
+
+.contacts a {
+  padding: 5px;
+}
+
+.contacts__item--address {
+  /* order: 0; */
+}
+
+.contacts__item--schedule {
+  order: 2;
+}
+
+.contacts__item--phone {
+  order: 1;
+}
+
+.contacts__item--mail {
+  order: 3;
+}

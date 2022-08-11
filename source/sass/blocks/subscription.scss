@@ -1,8 +1,41 @@
 .subscription {
+  margin-bottom: 100px;
   background: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   color: $color-default-white;
 }
 
-.subscription a {
+.subscription__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr min-content;
+  column-gap: 65px;
+  align-items: end;
+  padding-bottom: 25px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.subscription__list ul {
+  margin-left: 30px;
+  list-style: none;
+
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+@include vp-767 {
+  .subscription__inner img {
+    display: none;
+  }
+}
+
+.subscription__list a {
   color: $color-default-white;
 }

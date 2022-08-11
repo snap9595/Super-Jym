@@ -81,3 +81,13 @@ button,
 [type="submit"] {
   appearance: none;
 }
+
+.title {
+  text-align: center;
+  font-family: $ff-bebas-neue;
+  font-weight: 700;
+  font-size: 3.07rem;
+  line-height: 100%;
+  letter-spacing: 0.03em;
+  color: $color-sapphire-blue;
+}

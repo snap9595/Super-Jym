@@ -1,0 +1,40 @@
+.about-us {
+  min-height: 337px;
+  background: linear-gradient(90deg, $color-sapphire-blue 50%, $color-default-white 50%);
+  box-shadow: inset 0 1px 0 0 $color-light-slate-grey;
+
+  @include vp-1199 {
+    background: none;
+  }
+}
+
+.about-us__wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  max-width: 1160px;
+  padding-bottom: 70px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+}
+
+.about-us__inner {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    width: 100%;
+    background-color: $color-sapphire-blue;
+  }
+}
+
+.about-us__inner h3 {
+  margin-top: 70px;
+  line-height: 130%;
+  color: $color-default-white;
+}

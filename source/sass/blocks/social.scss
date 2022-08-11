@@ -1,0 +1,17 @@
+.social ul {
+  margin: 0;
+  padding: 0;
+  margin-right: -5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  gap: 5px;
+  justify-content: flex-end;
+  max-width: 200px;
+}
+
+.social a {
+  display: block;
+  padding: 5px;
+  width: 35px;
+  height: 35px;
+}
