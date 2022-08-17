@@ -5,13 +5,27 @@
   padding-bottom: 120px;
   margin-bottom: 120px;
   background-color: $color-ghost-white;
+
+  @include vp-1199 {
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+  }
 }
 
 .tickets img {
   position: absolute;
   z-index: -1;
-  bottom: 0;
-  right: 0;
+  right: 1px;
+  bottom: -184px;
+
+  @include vp-767 {
+    display: none;
+  }
 }
 
 .tickets__wrap {
@@ -21,17 +35,41 @@
 }
 
 .tickets__wrap h3 {
+  margin: 0;
+  margin-top: 67px;
   font-family: $ff-bebas-neue;
   font-size: 3.07rem;
   line-height: 100%;
   letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    margin-top: 50px;
+    font-size: 2.63rem;
+  }
+
+  @include vp-767 {
+    margin-top: 19px;
+    font-size: 2rem;
+  }
 }
 
 .tickets__wrap ul {
   display: flex;
-  column-gap: 40px;
+  column-gap: 28px;
   padding: 0;
+  margin: 0;
+  margin-top: 33px;
   list-style: none;
+
+  @include vp-1199 {
+    column-gap: 35px;
+    margin-top: 26px;
+  }
+
+  @include vp-767 {
+    margin-top: 19px;
+    column-gap: 46px;
+  }
 }
 
 .tickets__wrap button {
@@ -42,25 +80,47 @@
   border: none;
   cursor: pointer;
   user-select: none;
+
+  @include vp-1199 {
+    font-size: 1.13rem;
+  }
+
+  @include vp-767 {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1rem;
+  }
 }
 
 .tickets__inner ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 40px;
+  gap: 40px 38px;
   padding: 0;
+  margin: 0;
+  margin-top: 48px;
   list-style: none;
 
   @include vp-1199 {
     grid-template-columns: 1fr;
+    justify-items: center;
+    margin-top: 54px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: minmax(290px, 450px);
+    justify-content: center;
+    margin-top: 45px;
+    row-gap: 35px;
   }
 }
 
 .tickets__inner li {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 360px;
+  width: 360px;
   min-height: 448px;
   background-color: $color-default-white;
   border: 7px solid $color-default-white;
@@ -69,38 +129,79 @@
     border-image: linear-gradient(136deg, #d10a42 20%, #00359f 100%);
     border-image-slice: 1;
   }
+
+  @include vp-1199 {
+    width: 441px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    min-height: 384px;
+  }
 }
 
 .tickets__inner h4 {
-  margin: 68px 0 22px;
+  margin: 50px 0 4px;
   font-weight: 700;
   font-size: 1.63rem;
-  line-height: 112%;
+  line-height: 154%;
+
+  @include vp-1199 {
+    margin: 56px 0 9px;
+    line-height: 112%;
+  }
+
+  @include vp-767 {
+    margin-top: 44px;
+    font-size: 1.38rem;
+    line-height: 110%;
+  }
 }
 
 .tickets__lessons {
-  margin-bottom: 50px;
+  margin-bottom: 66px;
   line-height: 150%;
   color: $color-chambray-blue;
+
+  @include vp-767 {
+    margin-bottom: 54px;
+  }
 }
 
 .tickets__prices {
-  margin-bottom: 59px;
+  z-index: 1;
+  margin-bottom: 34px;
   font-weight: 700;
   font-size: 3.75rem;
   line-height: 150%;
   color: $color-egyptian-blue;
+
+  @include vp-767 {
+    margin-bottom: 30px;
+    margin-left: 8px;
+    font-size: 3rem;
+  }
+}
+
+.tickets__dooble-prices {
+  position: absolute;
+  z-index: 0;
+  top: 129px;
+  font-weight: 700;
+  font-size: 6.25rem;
+  line-height: 150%;
+  color: $color-whisper-grey;
+  opacity: 0.48;
+
+  @include vp-767 {
+    top: 111px;
+    font-size: 5rem;
+  }
 }
 
 .tickets__inner a {
-  padding: 27px 45px;
-  font-weight: 700;
-  font-size: 0.75rem;
-  line-height: 14px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  user-select: none;
-  cursor: pointer;
+  padding: 24px 44px;
+  color: $color-sapphire-blue;
   border: 2px solid $color-sapphire-blue;
 
   &:hover {

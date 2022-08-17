@@ -1,6 +1,6 @@
 .cross-fit {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 660px;
   min-height: 500px;
   margin-bottom: 100px;
 
@@ -11,32 +11,46 @@
 
   @include vp-767 {
     grid-template-columns: 1fr;
+    margin-bottom: 68px;
   }
 }
 
-@include vp-1199 {
-  .cross-fit img {
+.cross-fit img {
+  background-color: $color-sapphire-blue--89;
+
+  @include vp-1199 {
     width: 386px;
     height: 292px;
   }
+
+  @include vp-767 {
+    min-width: 100%;
+    object-fit: cover;
+  }
 }
 
-
 .cross-fit__inner {
-  padding: 87px 79px 87px 103px;
+  padding: 81px 81px 58px 77px;
   color: $color-default-white;
   background-color: $color-torch-red;
 
   @include vp-1199 {
-    padding: 45px 51px;
+    padding: 48px 45px;
+    padding-right: 46px;
+    padding-top: 44px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 50px;
   }
 }
 
 .cross-fit__inner p {
+  margin: 0;
   font-size: 1.13rem;
 
   @include vp-1199 {
-    margin: 0;
+
     font-size: 0.75rem;
   }
 }
@@ -44,10 +58,16 @@
 .cross-fit__wrap {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 8px;
+
+  @include vp-1199 {
+    margin-bottom: 0;
+  }
 }
 
 .cross-fit__wrap h2 {
   margin: 0;
+  margin-top: 3px;
   font-family: $ff-bebas-neue;
   font-size: 5.63rem;
   line-height: 100%;
@@ -56,6 +76,7 @@
 
   @include vp-1199 {
     font-size: 3.25rem;
+    margin-top: 4px;
   }
 }
 
@@ -63,20 +84,32 @@
   padding: 0;
   margin: 0;
   list-style: none;
+
+  @include vp-1199 {
+    margin-top: 2px;
+  }
+
+  @include vp-767 {
+    margin-top: 1px;
+  }
 }
 
 .cross-fit__wrap li {
-  margin-bottom: 30px;
+  margin-bottom: 6px;
 
   @include vp-1199 {
-    margin-bottom: 15px;
+    margin-bottom: 0;
   }
 }
 
 .cross-fit__box {
   display: flex;
   align-items: center;
-  column-gap: 10px;
+  column-gap: 7px;
+
+  @include vp-1199 {
+    column-gap: 4px;
+  }
 }
 
 .cross-fit__wrap span {
@@ -92,7 +125,7 @@
 .cross-fit__wrap p {
   margin: 0;
   font-weight: 400;
-  font-size: 0.88rem;
+  font-size: 1.13rem;
   line-height: 150%;
 
   @include vp-1199 {
@@ -100,23 +133,31 @@
   }
 }
 
-.cross-fit__inner a {
-  display: block;
-  text-align: center;
-  max-width: 343px;
-  padding: 29px 40px;
-  font-weight: 700;
-  font-size: 0.75rem;
-  line-height: 110%;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: $color-default-white;
-  border: 4px solid $color-default-white;
-  user-select: none;
-  cursor: pointer;
+.cross-fit__box p {
+  font-size: 0.88rem;
+  line-height: 150%;
 
   @include vp-1199 {
-    padding: 16px 52px;
     font-size: 0.63rem;
+  }
+}
+
+.cross-fit__inner a {
+  margin-top: 49px;
+  max-width: 343px;
+  padding: 25px 40px;
+  border: 4px solid $color-default-white;
+
+  @include vp-1199 {
+    margin-top: 28px;
+    padding: 13px 17px;
+    font-size: 0.63rem;
+    border: 2px solid $color-default-white;
+  }
+
+  @include vp-767 {
+    margin-top: 30px;
+    padding: 13px 17px 12px;
+    width: 100%;
   }
 }

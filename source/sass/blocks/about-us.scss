@@ -1,5 +1,5 @@
 .about-us {
-  min-height: 337px;
+  min-height: 336px;
   background: linear-gradient(90deg, $color-sapphire-blue 50%, $color-default-white 50%);
   box-shadow: inset 0 1px 0 0 $color-light-slate-grey;
 
@@ -13,7 +13,6 @@
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
   max-width: 1160px;
-  padding-bottom: 70px;
 
   @include vp-1199 {
     grid-template-columns: 1fr;
@@ -22,9 +21,6 @@
 }
 
 .about-us__inner {
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
   color: $color-default-white;
 
   @include vp-1199 {
@@ -33,8 +29,35 @@
   }
 }
 
-.about-us__inner h3 {
-  margin-top: 70px;
+.about-us__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  width: 580px;
+
+  @include vp-1199 {
+    margin: 0 auto;
+    padding-bottom: 69px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.about-us__wrapper h3 {
+  padding-top: 61px;
+  text-align: left;
   line-height: 130%;
   color: $color-default-white;
+
+  @include vp-1199 {
+    padding-top: 62px;
+    padding-left: 39px;
+  }
+
+  @include vp-767 {
+    padding-top: 64px;
+    padding-left: 15px;
+  }
 }

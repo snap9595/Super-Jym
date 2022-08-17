@@ -1,42 +1,188 @@
 .coachs {
   position: relative;
+  max-width: 1160px;
+  margin: 0 auto;
   margin-bottom: 120px;
+  padding-top: 17px;
+
+  @include vp-1279 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include vp-1199 {
+    max-width: 656px;
+    padding-top: 0;
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    max-width: 226px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 70px;
+  }
 }
 
 .coachs h3 {
-  font-family: $ff-bebas-neue;
-  font-size: 3.07rem;
-  line-height: 100%;
-  letter-spacing: 0.03em;
+  text-align: left;
+
+  @include vp-1199 {
+    text-align: center;
+  }
+
+  @include vp-767 {
+    margin-bottom: 3px;
+  }
 }
 
-.coachs__wrap article {
+.coachs__wrap {
+  margin-top: 53px;
+
+  @include vp-1199 {
+    margin-top: 40px;
+  }
+}
+
+.coachs__card {
+  position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 260px;
   height: 294px;
-  position: relative;
-  background-color: $color-sapphire-blue--89;
+  background: $color-sapphire-blue--89;
+
+  @include vp-767 {
+    height: 274px;
+  }
 }
 
-.coachs__wrap h4 {
+.coachs__card h4 {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  margin-bottom: 22px;
   font-weight: 700;
   font-size: 1.13rem;
   line-height: 150%;
   color: $color-default-white;
 }
 
-.coachs__wrap span {
+.coachs__card span {
+  margin-top: 75px;
   line-height: 150%;
   color: $color-spindle-grey;
+
+  @include vp-767 {
+    margin-top: 66px;
+  }
 }
 
-.coachs__wrap ul {
-  padding: 0;
+.coachs__card ul {
+  overflow-y: auto;
+  margin-top: 33px;
+  padding: 0 20px 0 69px;
+
+  @include vp-767 {
+    margin-top: 33px;
+    padding: 0 20px 0 50px;
+  }
 }
 
-.coachs__wrap li {
+.coachs__card li {
+  margin-bottom: 12px;
   font-size: 0.88rem;
   line-height: 150%;
   color: $color-default-white;
+}
+
+.coachs__card img {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  object-fit: cover;
+}
+
+.coachs__card:hover img {
+  z-index: -1;
+}
+
+
+.coachs__card:hover h4 {
+  bottom: auto;
+  top: 29px;
+  left: 55px;
+
+  @include vp-767 {
+    top: 19px;
+    left: 40px;
+  }
+}
+
+.coachs__buttons {
+  position: absolute;
+  left: -69px;
+  top: 243px;
+  display: flex;
+  justify-content: space-between;
+  width: 111%;
+
+  @include vp-1199 {
+    left: -21px;
+    top: 206px;
+    width: 106%;
+  }
+
+  @include vp-767 {
+    left: -45px;
+    top: 194px;
+    width: 140%;
+  }
+}
+
+.coachs__button {
+  position: relative;
+  border: none;
+  background: $color-transparent;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.coachs__button::after {
+  position: absolute;
+  content: "";
+  top: 12px;
+  left: 14px;
+  padding: 11px;
+  border: solid $color-dark-grey;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  transform: rotate(135deg);
+
+  @include vp-767 {
+    padding: 6px;
+  }
+}
+
+.coachs__button--next::after {
+  transform: rotate(314deg);
+}
+
+.coachs__button:focus {
+  outline: none;
+}
+
+.coachs__button:hover::after,
+.coachs__button:focus::after {
+  border: solid $color-sapphire-blue;
+  border-width: 0 1px 1px 0;
 }

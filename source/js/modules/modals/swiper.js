@@ -4,8 +4,8 @@ const swiper = new Swiper('.swiper', {
   modules: [Navigation],
   loop: true,
   navigation: {
-    nextEl: '.swiper-button-prev',
-    prevEl: '.swiper-button-next',
+    nextEl: '.coachs__button--prev',
+    prevEl: '.coachs__button--next',
   },
   breakpoints: {
     320: {

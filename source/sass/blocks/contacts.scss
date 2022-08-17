@@ -1,28 +1,74 @@
 .contacts {
   justify-self: center;
-  width: 100%;
+  width: 580px;
+
+  @include vp-1199 {
+    padding-bottom: 60px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
 }
 
 .contacts h3 {
-  margin-top: 70px;
-  margin-left: 120px;
-  margin-bottom: 57px;
+  margin-top: 69px;
+  margin-left: 118px;
+  margin-bottom: 40px;
   text-align: left;
+
+  @include vp-1199 {
+    margin-left: 39px;
+    margin-bottom: 33px;
+  }
+
+  @include vp-767 {
+    margin-left: 15px;
+  }
 }
 
 .contacts ul {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px 70px;
+  gap: 17px 119px;
   padding: 0;
   margin: 0;
   margin-left: 120px;
   list-style: none;
 
   @include vp-1199 {
+    gap: 20px 86px;
     margin-left: 0;
-    padding-left: 130px;
-    padding-right: 160px;
+    padding-left: 39px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 18px 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.contacts ul::after {
+  position: absolute;
+  content: "";
+  top: 6px;
+  left: 232px;
+  width: 1px;
+  height: 102px;
+  background-color: $color-light-slate-grey;
+
+  @include vp-1199 {
+    top: 8px;
+    left: 305px;
+    width: 1px;
+    height: 129px;
+  }
+
+  @include vp-767 {
+    display: none;
   }
 }
 
@@ -32,25 +78,44 @@
 
 .contacts h4 {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 4px;
   line-height: 150%;
+
+  @include vp-1199 {
+    margin-bottom: 6px;
+    font-size: 1.25rem;
+  }
+
+  @include vp-767 {
+    margin-bottom: 7px;
+  }
 }
 
-.contacts address {
+.contacts address,
+.contacts p,
+.contacts a {
+  margin: 0;
   font-style: normal;
-  margin-bottom: 17px;
+  font-size: 0.88rem;
+  line-height: 150%;
+
+  @include vp-1199 {
+    font-size: 1.13rem;
+    line-height: 152%;
+  }
 }
 
 .contacts a {
   padding: 5px;
-}
-
-.contacts__item--address {
-  /* order: 0; */
+  margin-left: -5px;
 }
 
 .contacts__item--schedule {
   order: 2;
+
+  @include vp-767 {
+    order: 1;
+  }
 }
 
 .contacts__item--phone {

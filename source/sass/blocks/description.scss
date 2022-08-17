@@ -1,4 +1,5 @@
 .description {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -11,34 +12,82 @@
   line-height: 119%;
   letter-spacing: 0.03em;
   text-align: right;
+
+  @include vp-1199 {
+    font-size: 2.13rem;
+    line-height: 121%;
+  }
+
+  @include vp-767 {
+    font-size: 1.75rem;
+  }
+}
+
+.description__box {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
 }
 
 .description h2 {
   margin: 0;
+  margin-top: 6px;
   font-family: $ff-bebas-neue;
-  font-size: 6.81rem;
+  font-size: 6.82rem;
   line-height: 100%;
   text-align: right;
   letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    margin-top: 1px;
+    font-size: 5.38rem;
+  }
+
+  @include vp-767 {
+    margin-top: 8px;
+    font-size: 4.88rem;
+  }
 }
 
 .description ul {
+  padding: 0;
   font-size: 0.88rem;
   line-height: 150%;
   list-style: none;
   text-align: right;
+  margin-right: -30px;
+
+  @include vp-1199 {
+    right: 213px;
+    bottom: 125px;
+  }
+
+  @include vp-767 {
+    right: 177px;
+    bottom: 102px;
+  }
 }
 
 .description a {
-  display: block;
-  margin-top: 50px;
-  padding: 24px 55px;
-  color: $color-default-white;
-  text-align: right;
-  font-weight: 700;
-  font-size: 0.75rem;
-  line-height: 116%;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  margin-top: 58px;
+  margin-bottom: 48px;
+  padding: 19px 31px;
   border: 4px solid $color-default-white;
+
+  &:hover {
+    color: $color-spindle-grey;
+    border: 4px solid $color-spindle-grey;
+  }
+
+  @include vp-1199 {
+    margin-top: 42px;
+    margin-bottom: 22px;
+  }
+
+  @include vp-767 {
+    margin-top: 43px;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 22px 20px 19px;
+  }
 }
