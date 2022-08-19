@@ -38,6 +38,10 @@
   }
 }
 
+.coachs__swiper {
+  position: relative;
+}
+
 .coachs__wrap {
   margin-top: 53px;
 
@@ -146,43 +150,4 @@
     top: 194px;
     width: 140%;
   }
-}
-
-.coachs__button {
-  position: relative;
-  border: none;
-  background: $color-transparent;
-  width: 45px;
-  height: 45px;
-  cursor: pointer;
-}
-
-.coachs__button::after {
-  position: absolute;
-  content: "";
-  top: 12px;
-  left: 14px;
-  padding: 11px;
-  border: solid $color-dark-grey;
-  border-width: 0 1px 1px 0;
-  display: inline-block;
-  transform: rotate(135deg);
-
-  @include vp-767 {
-    padding: 6px;
-  }
-}
-
-.coachs__button--next::after {
-  transform: rotate(314deg);
-}
-
-.coachs__button:focus {
-  outline: none;
-}
-
-.coachs__button:hover::after,
-.coachs__button:focus::after {
-  border: solid $color-sapphire-blue;
-  border-width: 0 1px 1px 0;
 }

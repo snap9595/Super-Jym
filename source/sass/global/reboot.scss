@@ -114,3 +114,47 @@ button,
   user-select: none;
   cursor: pointer;
 }
+
+.slider-button {
+  position: relative;
+  border: none;
+  background: $color-transparent;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.slider-button::after {
+  position: absolute;
+  content: "";
+  top: 12px;
+  left: 14px;
+  padding: 11px;
+  border: solid $color-dark-grey;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  transform: rotate(135deg);
+
+  @include vp-767 {
+    padding: 6px;
+  }
+}
+
+.slider-button--next::after {
+  transform: rotate(314deg);
+}
+
+.slider-button:focus {
+  outline: none;
+}
+
+.slider-button:hover::after,
+.slider-button:focus-within::after {
+  border: solid $color-russian-black;
+  border-width: 0 1px 1px 0;
+}
+
+.swiper-button-disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}

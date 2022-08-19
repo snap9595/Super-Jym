@@ -1,9 +1,10 @@
-import {swiper} from './modules/modals/swiper';
-import {playVideo} from './modules/video';
+import {swiperCoachs, swiperReviews} from './modules/slider';
+import {addTabs} from './modules/tickets';
 
 window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
-    swiper.init();
-    playVideo();
+    addTabs();
+    swiperCoachs.init();
+    swiperReviews.init();
   });
 });

@@ -1,6 +1,6 @@
 .cross-fit {
   display: grid;
-  grid-template-columns: 1fr 660px;
+  grid-template-columns: 1fr 662px;
   min-height: 500px;
   margin-bottom: 100px;
 
@@ -30,7 +30,7 @@
 }
 
 .cross-fit__inner {
-  padding: 81px 81px 58px 77px;
+  padding: 81px 78px 58px 75px;
   color: $color-default-white;
   background-color: $color-torch-red;
 
@@ -144,7 +144,7 @@
 
 .cross-fit__inner a {
   margin-top: 49px;
-  max-width: 343px;
+  max-width: 345px;
   padding: 25px 40px;
   border: 4px solid $color-default-white;
 

@@ -25,14 +25,12 @@
       <div class="header__inner">
         <div class="description">
           <p>Омск</p>
-          <div class="description__box">
-            <h2>Фитнес <br> <span>центр</span></h2>
-            <ul>
-              <li>Тренажёрный зал</li>
-              <li>Групповые занятия</li>
-              <li>Кардио-зона</li>
-            </ul>
-          </div>
+          <h2>Фитнес <br> центр</h2>
+          <ul>
+            <li>Тренажёрный зал</li>
+            <li>Групповые занятия</li>
+            <li>Кардио-зона</li>
+          </ul>
           <a class="button" href="#">Купить абонемент</a>
         </div>
         <picture>
@@ -92,11 +90,12 @@
       </div>
 
       <div class="gym__video">
-        <iframe width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw" title="YouTube video player"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+        <iframe id="player" width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
 
-        <a class="link" href="https://www.youtube.com/watch?v=9TZXsZItgdw">
+        <a class="link" href="#">
           <picture>
             <source type="image/webp" media="(max-width: 767px)"
               srcset="img/gym-link-mobile@1x.webp 1x, img/gym-link-mobile@2x.webp 2x">
@@ -119,81 +118,91 @@
           <h3>Абонементы</h3>
           <ul>
             <li>
-              <button type="button">1 месяц</button>
+              <button type="button" data-id="one" class="button tickets__button is-active">1 месяц</button>
             </li>
             <li>
-              <button type="button">6 месяцев</button>
+              <button type="button" data-id="two" class="button tickets__button">6 месяцев</button>
             </li>
             <li>
-              <button type="button">12 месяцев</button>
+              <button type="button" data-id="three" class="button tickets__button">12 месяцев</button>
             </li>
           </ul>
         </div>
-        <div class="tickets__inner">
+        <div id="one" class="tickets__inner no-js is-active">
           <ul>
             <li>
               <h4>С тренером</h4>
               <span class="tickets__lessons">12 занятий</span>
-              <span class="tickets__prices">5000 <span>&#8381;</span></span>
+              <span class="tickets__prices">5000 <span class="tickets__ruble">&#8381;</span></span>
               <span class="tickets__dooble-prices">5000</span>
               <a class="button" href="#">Купить абонемент</a>
             </li>
             <li>
               <h4>Дневной</h4>
               <span class="tickets__lessons">с 8:00 до 17:00 </span>
-              <span class="tickets__prices">1700 <span>&#8381;</span></span>
+              <span class="tickets__prices">1700 <span class="tickets__ruble">&#8381;</span></span>
               <span class="tickets__dooble-prices">1700</span>
               <a class="button" href="#">Купить абонемент</a>
             </li>
             <li>
               <h4>Полный день</h4>
               <span class="tickets__lessons">с 8:00 до 22:00 </span>
-              <span class="tickets__prices">2700 <span>&#8381;</span></span>
+              <span class="tickets__prices">2700 <span class="tickets__ruble">&#8381;</span></span>
               <span class="tickets__dooble-prices">2700</span>
               <a class="button" href="#">Купить абонемент</a>
             </li>
           </ul>
         </div>
-        <!-- <ul>
-          <li>
-            <h4>С тренером</h4>
-            <span>12 занятий</span>
-            <span>5000<span>&#8381;</span></span>
-            <a href="#">Купить абонемент</a>
-          </li>
-          <li>
-            <h4>Дневной</h4>
-            <span>с 8:00 до 17:00 </span>
-            <span>8500<span>&#8381;</span></span>
-            <a href="#">Купить абонемент</a>
-          </li>
-          <li>
-            <h4>Полный день</h4>
-            <span>с 8:00 до 22:00 </span>
-            <span>13500<span>&#8381;</span></span>
-            <a href="#">Купить абонемент</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <h4>С тренером</h4>
-            <span>12 занятий</span>
-            <span>5000<span>&#8381;</span></span>
-            <a href="#">Купить абонемент</a>
-          </li>
-          <li>
-            <h4>Дневной</h4>
-            <span>с 8:00 до 17:00 </span>
-            <span>17000<span>&#8381;</span></span>
-            <a href="#">Купить абонемент</a>
-          </li>
-          <li>
-            <h4>Полный день</h4>
-            <span>с 8:00 до 22:00 </span>
-            <span>27000<span>&#8381;</span></span>
-            <a href="#">Купить абонемент</a>
-          </li>
-        </ul> -->
+        <div id="two" class="tickets__inner no-js">
+          <ul>
+            <li>
+              <h4>С тренером</h4>
+              <span class="tickets__lessons">12 занятий</span>
+              <span class="tickets__prices">5000 <span class="tickets__ruble">&#8381;</span></span>
+              <span class="tickets__dooble-prices">5000</span>
+              <a class="button" href="#">Купить абонемент</a>
+            </li>
+            <li>
+              <h4>Дневной</h4>
+              <span class="tickets__lessons">с 8:00 до 17:00 </span>
+              <span class="tickets__prices">8500 <span class="tickets__ruble">&#8381;</span></span>
+              <span class="tickets__dooble-prices">8500</span>
+              <a class="button" href="#">Купить абонемент</a>
+            </li>
+            <li>
+              <h4>Полный день</h4>
+              <span class="tickets__lessons">с 8:00 до 22:00 </span>
+              <span class="tickets__prices">13500 <span class="tickets__ruble">&#8381;</span></span>
+              <span class="tickets__dooble-prices">13500</span>
+              <a class="button" href="#">Купить абонемент</a>
+            </li>
+          </ul>
+        </div>
+        <div id="three" class="tickets__inner no-js">
+          <ul>
+            <li>
+              <h4>С тренером</h4>
+              <span class="tickets__lessons">12 занятий</span>
+              <span class="tickets__prices">5000 <span class="tickets__ruble">&#8381;</span></span>
+              <span class="tickets__dooble-prices">5000</span>
+              <a class="button" href="#">Купить абонемент</a>
+            </li>
+            <li>
+              <h4>Дневной</h4>
+              <span class="tickets__lessons">с 8:00 до 17:00 </span>
+              <span class="tickets__prices">17000 <span class="tickets__ruble">&#8381;</span></span>
+              <span class="tickets__dooble-prices">17000</span>
+              <a class="button" href="#">Купить абонемент</a>
+            </li>
+            <li>
+              <h4>Полный день</h4>
+              <span class="tickets__lessons">с 8:00 до 22:00 </span>
+              <span class="tickets__prices">27000 <span class="tickets__ruble">&#8381;</span></span>
+              <span class="tickets__dooble-prices">27000</span>
+              <a class="button" href="#">Купить абонемент</a>
+            </li>
+          </ul>
+        </div>
         <picture>
           <source type="image/webp" srcset="img/weights@1x.webp 1x, img/weights@2x.webp 2x">
 
@@ -241,10 +250,10 @@
     <section class="coachs">
       <h3 class="title">Тренеры</h3>
       <div class="coachs__buttons">
-        <button type="button" aria-label="Назад" class="coachs__button coachs__button--prev"></button>
-        <button type="button" aria-label="Вперед" class="coachs__button coachs__button--next"></button>
+        <button type="button" class="slider-button coachs-button-prev"></button>
+        <button type="button" class="slider-button slider-button--next coachs-button-next"></button>
       </div>
-      <div class="swiper">
+      <div class="coachs__swiper swiper">
         <div class="coachs__wrap swiper-wrapper">
           <article class="coachs__card swiper-slide">
             <h4>Анна Павлова</h4>
@@ -256,6 +265,7 @@
             </ul>
             <picture>
               <source type="image/webp" srcset="img/slider/coach-anna@1x.webp 1x, img/slider/coach-anna@2x.webp 2x">
+              <!-- 1х: 260px; 2x: 520px -->
               <img src="img/slider/coach-anna@1x.jpg" srcset="img/slider/coach-anna@2x.jpg 2x"
                 alt="Тренер Анна Павлова." width="260" height="294">
             </picture>
@@ -270,6 +280,7 @@
             </ul>
             <picture>
               <source type="image/webp" srcset="img/slider/coach-alexey@1x.webp 1x, img/slider/coach-alexey@2x.webp 2x">
+              <!-- 1х: 260px; 2x: 520px -->
               <img src="img/slider/coach-alexey@1x.jpg" srcset="img/slider/coach-alexey@2x.jpg 2x"
                 alt="Тренер Анна Павлова." width="260" height="294">
             </picture>
@@ -285,6 +296,7 @@
             <picture>
               <source type="image/webp"
                 srcset="img/slider/coach-aleksandr@1x.webp 1x, img/slider/coach-aleksandr@2x.webp 2x">
+              <!-- 1х: 260px; 2x: 520px -->
               <img src="img/slider/coach-aleksandr@1x.jpg" srcset="img/slider/coach-aleksandr@2x.jpg 2x"
                 alt="Тренер Анна Павлова." width="260" height="294">
             </picture>
@@ -299,11 +311,12 @@
             </ul>
             <picture>
               <source type="image/webp" srcset="img/slider/coach-maria@1x.webp 1x, img/slider/coach-maria@2x.webp 2x">
+              <!-- 1х: 260px; 2x: 520px -->
               <img src="img/slider/coach-maria@1x.jpg" srcset="img/slider/coach-maria@2x.jpg 2x"
                 alt="Тренер Анна Павлова." width="260" height="294">
             </picture>
           </article>
-          <article class="swiper-slide">
+          <article class="coachs__card swiper-slide">
             <h4>Анна Павлова</h4>
             <span>CrossFit</span>
             <ul>
@@ -311,8 +324,14 @@
               <li>Победитель чемпионата России по&nbsp;CrossFit</li>
               <li>Опыт — 6 лет</li>
             </ul>
+            <picture>
+              <source type="image/webp" srcset="img/slider/coach-anna@1x.webp 1x, img/slider/coach-anna@2x.webp 2x">
+              <!-- 1х: 260px; 2x: 520px -->
+              <img src="img/slider/coach-anna@1x.jpg" srcset="img/slider/coach-anna@2x.jpg 2x"
+                alt="Тренер Анна Павлова." width="260" height="294">
+            </picture>
           </article>
-          <article class="swiper-slide">
+          <article class="coachs__card swiper-slide">
             <h4>Алексей Лавров</h4>
             <span>CrossFit</span>
             <ul>
@@ -320,8 +339,14 @@
               <li>Победитель чемпионата России по&nbsp;CrossFit</li>
               <li>Опыт — 6 лет</li>
             </ul>
+            <picture>
+              <source type="image/webp" srcset="img/slider/coach-anna@1x.webp 1x, img/slider/coach-anna@2x.webp 2x">
+              <!-- 1х: 260px; 2x: 520px -->
+              <img src="img/slider/coach-anna@1x.jpg" srcset="img/slider/coach-anna@2x.jpg 2x"
+                alt="Тренер Анна Павлова." width="260" height="294">
+            </picture>
           </article>
-          <article class="swiper-slide">
+          <article class="coachs__card swiper-slide">
             <h4>Александр Пашков</h4>
             <span>CrossFit</span>
             <ul>
@@ -329,8 +354,14 @@
               <li>Победитель чемпионата России по&nbsp;CrossFit</li>
               <li>Опыт — 6 лет</li>
             </ul>
+            <picture>
+              <source type="image/webp" srcset="img/slider/coach-anna@1x.webp 1x, img/slider/coach-anna@2x.webp 2x">
+              <!-- 1х: 260px; 2x: 520px -->
+              <img src="img/slider/coach-anna@1x.jpg" srcset="img/slider/coach-anna@2x.jpg 2x"
+                alt="Тренер Анна Павлова." width="260" height="294">
+            </picture>
           </article>
-          <article class="swiper-slide">
+          <article class="coachs__card swiper-slide">
             <h4>Мария Кетова</h4>
             <span>CrossFit</span>
             <ul>
@@ -338,6 +369,12 @@
               <li>Победитель чемпионата России по&nbsp;CrossFit</li>
               <li>Опыт — 6 лет</li>
             </ul>
+            <picture>
+              <source type="image/webp" srcset="img/slider/coach-anna@1x.webp 1x, img/slider/coach-anna@2x.webp 2x">
+              <!-- 1х: 260px; 2x: 520px -->
+              <img src="img/slider/coach-anna@1x.jpg" srcset="img/slider/coach-anna@2x.jpg 2x"
+                alt="Тренер Анна Павлова." width="260" height="294">
+            </picture>
           </article>
         </div>
       </div>
@@ -429,17 +466,17 @@
         </li>
         <li class="season-ticket__item">
           <h5>Скидка 20%</h5>
-          <p>Корпоративный фитнес с&nbsp;командой</p>
+          <p>Корпоративный фитнес&ensp;с&nbsp;командой</p>
           <a class="button" href="#">Подробнее</a>
         </li>
       </ul>
     </section>
 
-    <section class="reviews container">
+    <section class="reviews">
       <h3 class="title">Отзывы</h3>
-      <div class="reviews__wrap">
-        <ul>
-          <li>
+      <div class=" reviews__swiper swiper reviews__wrap">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
             <picture>
               <source type="image/webp" srcset="img/avatar-anna@1x.webp 1x, img/avatar-anna@2x.webp 2x">
               <!-- 1х: 80px; 2x: 160px -->
@@ -449,19 +486,43 @@
               <h4>Анна Орлова</h4>
               <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры
                 обновляют, персонал
-                дружелюбный. Зал просторный, даже&nbsp;в вечернее время нет очередей&raquo;
+                дружелюбный. Зал просторный, даже <br> в вечернее время нет очередей&raquo;
               </p>
             </div>
           </li>
-          <!-- <li>
+          <li class="swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="img/avatar-anna@1x.webp 1x, img/avatar-anna@2x.webp 2x">
+              <!-- 1х: 80px; 2x: 160px -->
+              <img src="img/avatar-anna@1x.png" srcset="img/avatar-anna@2x.png 2x" alt="аватар." width="80" height="80">
+            </picture>
+            <div class="reviews__inner">
               <h4>Анна Орлова</h4>
               <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры
                 обновляют, персонал
-                дружелюбный. Зал просторный, даже&nbsp;в вечернее время нет очередей&raquo;
+                дружелюбный. Зал просторный, даже <br> в вечернее время нет очередей&raquo;
               </p>
-            </li> -->
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="img/avatar-anna@1x.webp 1x, img/avatar-anna@2x.webp 2x">
+              <!-- 1х: 80px; 2x: 160px -->
+              <img src="img/avatar-anna@1x.png" srcset="img/avatar-anna@2x.png 2x" alt="аватар." width="80" height="80">
+            </picture>
+            <div class="reviews__inner">
+              <h4>Анна Орлова</h4>
+              <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры
+                обновляют, персонал
+                дружелюбный. Зал просторный, даже <br> в вечернее время нет очередей&raquo;
+              </p>
+            </div>
+          </li>
         </ul>
-
+        <div class="reviews__buttons">
+          <button type="button" class="slider-button swiper-button-prev"></button>
+          <button type="button" class="slider-button slider-button--next  swiper-button-next"></button>
+        </div>
       </div>
     </section>
 
@@ -564,6 +625,31 @@
   </footer>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
+  <script defer src="https://www.youtube.com/iframe_api"></script>
+  <!-- <script>
+    let player;
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        events: {
+          'onReady': onPlayerReady,
+        },
+      });
+    }
+    const link = document.querySelector('.link');
+    const img = document.querySelector('.gym__img');
+
+    function onPlayerReady() {
+      link.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        img.style.display = 'none';
+        player.playVideo();
+      });
+    }
+
+    onPlayerReady();
+
+  </script> -->
 </body>
 
 </html>
