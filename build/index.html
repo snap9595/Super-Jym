@@ -5,8 +5,13 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Описание проекта">
+  <meta name="description" content="самый большой фитнес центр за Уралом">
   <title>Super Jym</title>
+  <link rel="preload" href="fonts/bebas-neue-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/bebas-neue-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-light.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -90,12 +95,12 @@
       </div>
 
       <div class="gym__video">
-        <iframe id="player" width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw"
+        <iframe data-video-iframe width="364" height="228" data-src="https://www.youtube-nocookie.com/embed/9TZXsZItgdw"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
-
-        <a class="link" href="#">
+        <div class="gym__box no-js">
+          <button data-button="play" type="button"></button>
           <picture>
             <source type="image/webp" media="(max-width: 767px)"
               srcset="img/gym-link-mobile@1x.webp 1x, img/gym-link-mobile@2x.webp 2x">
@@ -105,10 +110,12 @@
               srcset="img/gym-link-desktop@1x.webp 1x, img/gym-link-desktop@2x.webp 2x">
 
             <!-- 1х: 364px; 2x: 728px -->
-            <img class="gym__img" src="img/gym-link-desktop@1x.jpg" srcset="img/gym-link-desktop@2x.jpg 2x"
+            <img src="img/gym-link-desktop@1x.jpg" srcset="img/gym-link-desktop@2x.jpg 2x"
               alt="Становая тяга." width="364" height="228">
           </picture>
-        </a>
+        </div>
+
+
       </div>
 
     </section>
@@ -204,10 +211,14 @@
           </ul>
         </div>
         <picture>
-          <source type="image/webp" srcset="img/weights@1x.webp 1x, img/weights@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1199px)"
+            srcset="img/weights-tablet@1x.webp 1x, img/weights-tablet@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 1200px)"
+            srcset="img/weights-desktop@1x.webp 1x, img/weights-desktop@2x.webp 2x">
 
-          <!-- 1х: 321px; 2x: 642px -->
-          <img src="img/weights@1x.png" srcset="img/weights@2x.png 2x" alt="Блины от штанги." width="321" height="384">
+          <!-- 1х: 287px; 2x: 574px -->
+          <img src="img/weights-desktop@1x.png" srcset="img/weights-desktop@2x.png 2x" alt="Блины от штанги."
+            width="287" height="494">
         </picture>
       </div>
     </section>
@@ -625,31 +636,7 @@
   </footer>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
-  <script defer src="https://www.youtube.com/iframe_api"></script>
-  <!-- <script>
-    let player;
 
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
-        events: {
-          'onReady': onPlayerReady,
-        },
-      });
-    }
-    const link = document.querySelector('.link');
-    const img = document.querySelector('.gym__img');
-
-    function onPlayerReady() {
-      link.addEventListener('click', (evt) => {
-        evt.preventDefault();
-        img.style.display = 'none';
-        player.playVideo();
-      });
-    }
-
-    onPlayerReady();
-
-  </script> -->
 </body>
 
 </html>
