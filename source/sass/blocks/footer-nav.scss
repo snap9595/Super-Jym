@@ -1,15 +1,14 @@
 .footer-nav ul {
-  margin: 0;
-  padding: 0;
-  margin-left: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  max-width: 700px;
+  margin: 0 0 0 16px;
+  padding: 20px 0;
   row-gap: 10px;
 
   @include vp-1199 {
+    max-width: 410px;
     column-gap: 10px;
-    padding-top: 21px;
-    margin-left: 16px;
+    padding-top: 22px;
+    margin-left: 12px;
   }
 
   @include vp-767 {
@@ -22,11 +21,14 @@
   }
 }
 
-
 .footer-nav a {
   padding: 5px 10px;
   font-size: 0.88rem;
   line-height: 115%;
+
+  &:hover {
+    opacity: 0.8;
+  }
 
   @include vp-767 {
     padding: 5px;

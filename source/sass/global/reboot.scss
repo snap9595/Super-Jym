@@ -18,10 +18,7 @@ html {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // оптимизация выравнивания шрифта относительно центра строки
   text-rendering: optimizeLegibility;
-  // если по прежнему есть проблемы с выравниванием
-  // https://transfonter.org/ - включите настройку https://prnt.sc/12rnt6g и переконвертируйте шрифт
 }
 
 a {
@@ -133,6 +130,7 @@ button,
   border: solid $color-dark-grey;
   border-width: 0 1px 1px 0;
   display: inline-block;
+  vertical-align: middle;
   transform: rotate(135deg);
 
   @include vp-767 {

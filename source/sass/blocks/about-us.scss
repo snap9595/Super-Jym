@@ -1,6 +1,6 @@
 .about-us {
   min-height: 336px;
-  background: linear-gradient(90deg, $color-sapphire-blue 50%, $color-default-white 50%);
+  background: $blue-to-right;
   box-shadow: inset 0 1px 0 0 $color-light-slate-grey;
 
   @include vp-1199 {
@@ -37,11 +37,12 @@
 
   @include vp-1199 {
     margin: 0 auto;
-    padding-bottom: 69px;
+    padding-bottom: 68px;
   }
 
   @include vp-767 {
     width: 100%;
+    padding-bottom: 69px;
   }
 }
 

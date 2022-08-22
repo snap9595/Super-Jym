@@ -18,11 +18,6 @@
   max-width: 1160px;
   margin: 0 auto;
 
-  @include vp-1279 {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
   @include vp-1199 {
     padding-left: 32px;
     padding-right: 45px;
@@ -40,7 +35,7 @@
 
   @include vp-1199 {
     margin-left: 13px;
-    margin-bottom: 44px;
+    margin-bottom: 43px;
   }
 
   @include vp-767 {
@@ -66,7 +61,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr auto;
     column-gap: 45px;
-    row-gap: 37px;
+    row-gap: 38px;
     padding: 0;
   }
 
@@ -75,29 +70,6 @@
     grid-template-rows: none;
     row-gap: 36px;
   }
-}
-
-.advantages__box ul::before,
-.advantages__box ul::after {
-  position: absolute;
-  content: "";
-  width: 340px;
-  height: 2px;
-  background-color: $color-crimson-red--20;
-
-  @include vp-1199 {
-    display: none;
-  }
-}
-
-.advantages__box ul::before {
-  left: 54px;
-  top: 164px;
-}
-
-.advantages__box ul::after {
-  right: 61px;
-  top: 164px;
 }
 
 .advantages__item {
@@ -116,17 +88,33 @@
 
 .advantages__item:first-child {
   padding-left: 13px;
-
-  /* @include vp-1199 {
-    padding-left: 0;
-  } */
 }
+
+.advantages__item:first-child::before,
+.advantages__item:nth-child(4n-2)::before {
+  position: absolute;
+  content: "";
+  bottom: 157px;
+  width: 340px;
+  height: 2px;
+  background-color: $color-crimson-red--20;
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.advantages__item:first-child::before {
+  left: 59px;
+  bottom: 157px;
+}
+
 
 .advantages__item span {
   font-weight: 700;
   font-size: 4.44rem;
   line-height: 100%;
-  background: linear-gradient(142.51deg, #d10a42 0%, #0041ca 87%);
+  background: $red-to-blue;
   background-clip: text;
   color: transparent;
 
@@ -196,8 +184,8 @@
   @include vp-1199 {
     grid-column: 1/-1;
     grid-row: 2/3;
-    width: 440px;
-    margin: 8px 0 4px 13px;
+    width: 442px;
+    margin: 7px 0 4px 13px;
     padding-top: 32px;
     padding-bottom: 2px;
   }

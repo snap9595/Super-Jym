@@ -32,16 +32,18 @@
 }
 
 .reviews__wrap li {
-  padding: 54px 58px 57px 61px;
+  padding: 54px 58px 56px 61px;
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 29px;
+  margin-right: 69px;
   color: $color-default-white;
   background-color: $color-resolution-blue;
 
   @include vp-1199 {
     padding: 54px 65px 56px;
     column-gap: 28px;
+    margin-right: 58px;
   }
 
   @include vp-767 {
@@ -49,7 +51,8 @@
     grid-template-columns: 1fr;
     width: 100%;
     padding: 40px 25px;
-    padding-bottom: 32px;
+    padding-bottom: 33px;
+    margin-right: 47px;
   }
 }
 
@@ -90,7 +93,7 @@
 
   @include vp-767 {
     min-height: 60px;
-    margin-bottom: 23px;
+    margin-bottom: 22px;
     padding-left: 99px;
     padding-top: 9px;
     line-height: 130%;

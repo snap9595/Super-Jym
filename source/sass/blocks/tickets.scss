@@ -17,7 +17,7 @@
   }
 }
 
-.tickets img {
+.tickets__box img {
   position: absolute;
   z-index: -1;
   right: 3px;
@@ -157,7 +157,7 @@
 
 .tickets__inner ul {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(300px, 360px));
   gap: 40px 38px;
   padding: 0;
   margin: 0;
@@ -182,11 +182,12 @@
   align-items: center;
   width: 360px;
   min-height: 448px;
+  padding-bottom: 15px;
   background-color: $color-default-white;
   border: 7px solid $color-default-white;
 
   &:hover {
-    border-image: linear-gradient(136deg, #d10a42 20%, #00359f 100%);
+    border-image: $crimson-to-smalt;
     border-image-slice: 1;
   }
 
@@ -202,6 +203,8 @@
 
 .tickets__inner h4 {
   margin: 50px 0 4px;
+  padding-left: 15px;
+  padding-right: 15px;
   font-weight: 700;
   font-size: 1.63rem;
   line-height: 154%;
@@ -220,6 +223,8 @@
 
 .tickets__lessons {
   margin-bottom: 66px;
+  padding-left: 15px;
+  padding-right: 15px;
   line-height: 150%;
   color: $color-chambray-blue;
 
@@ -230,6 +235,7 @@
 
 .tickets__prices {
   z-index: 1;
+  margin-left: 5px;
   margin-bottom: 34px;
   font-weight: 700;
   font-size: 3.75rem;
@@ -237,7 +243,7 @@
   color: $color-egyptian-blue;
 
   @include vp-767 {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
     margin-left: 8px;
     font-size: 3rem;
   }
@@ -269,13 +275,15 @@
 }
 
 .tickets__inner a {
+  margin-left: 15px;
+  margin-right: 15px;
   padding: 24px 44px;
   color: $color-sapphire-blue;
   border: 2px solid $color-sapphire-blue;
 
   &:hover {
     color: $color-default-white;
-    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    background: $torch-to-cobalt;
     border: 2px solid $color-default-white;
   }
 }

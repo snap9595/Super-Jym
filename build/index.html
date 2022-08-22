@@ -30,24 +30,28 @@
       <div class="header__inner">
         <div class="description">
           <p>Омск</p>
-          <h2>Фитнес <br> центр</h2>
-          <ul>
-            <li>Тренажёрный зал</li>
-            <li>Групповые занятия</li>
-            <li>Кардио-зона</li>
-          </ul>
-          <a class="button" href="#">Купить абонемент</a>
+          <div class="description__box">
+            <h2>Фитнес <br> <span>центр</span></h2>
+            <ul>
+              <li>Тренажёрный зал</li>
+              <li>Групповые занятия</li>
+              <li>Кардио-зона</li>
+            </ul>
+          </div>
+          <a class="button" href="#tickets">Купить абонемент</a>
         </div>
-        <picture>
-          <source type="image/webp" media="(max-width: 1199px)"
-            srcset="img/fitness-men-tablet@1x.webp 1x, img/fitness-men-tablet@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 1200px)"
-            srcset="img/fitness-men-desktop@1x.webp 1x, img/fitness-men-desktop@2x.webp 2x">
+        <div>
+          <picture>
+            <source type="image/webp" media="(max-width: 1199px)"
+              srcset="img/fitness-men-tablet@1x.webp 1x, img/fitness-men-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1200px)"
+              srcset="img/fitness-men-desktop@1x.webp 1x, img/fitness-men-desktop@2x.webp 2x">
 
-          <!-- 1х: 500px; 2x: 1000px -->
-          <img src="img/fitness-men-desktop@1x.jpg" srcset="img/fitness-men-desktop@2x.jpg 2x"
-            alt="Мужчина с костюме супермена." width="500" height="556">
-        </picture>
+            <!-- 1х: 500px; 2x: 1000px -->
+            <img src="img/fitness-men-desktop@1x.jpg" srcset="img/fitness-men-desktop@2x.jpg 2x"
+              alt="Мужчина с костюме супермена." width="500" height="556">
+          </picture>
+        </div>
         <div class="header__list">
           <ul>
             <li>
@@ -93,14 +97,13 @@
             width="660" height="401">
         </picture>
       </div>
-
       <div class="gym__video">
         <iframe data-video-iframe width="364" height="228" data-src="https://www.youtube-nocookie.com/embed/9TZXsZItgdw"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
         <div class="gym__box no-js">
-          <button data-button="play" type="button"></button>
+          <button type="button" data-button="play" aria-label="включить видео"></button>
           <picture>
             <source type="image/webp" media="(max-width: 767px)"
               srcset="img/gym-link-mobile@1x.webp 1x, img/gym-link-mobile@2x.webp 2x">
@@ -110,28 +113,29 @@
               srcset="img/gym-link-desktop@1x.webp 1x, img/gym-link-desktop@2x.webp 2x">
 
             <!-- 1х: 364px; 2x: 728px -->
-            <img src="img/gym-link-desktop@1x.jpg" srcset="img/gym-link-desktop@2x.jpg 2x"
-              alt="Становая тяга." width="364" height="228">
+            <img src="img/gym-link-desktop@1x.jpg" srcset="img/gym-link-desktop@2x.jpg 2x" alt="Становая тяга."
+              width="364" height="228">
           </picture>
         </div>
-
-
       </div>
-
     </section>
-    <section class="tickets">
+
+    <section id="tickets" class="tickets">
       <div class="container">
         <div class="tickets__wrap">
           <h3>Абонементы</h3>
           <ul>
             <li>
-              <button type="button" data-id="one" class="button tickets__button is-active">1 месяц</button>
+              <button type="button" data-id="one" aria-label="1 месяц." class="button tickets__button is-active">1
+                месяц</button>
             </li>
             <li>
-              <button type="button" data-id="two" class="button tickets__button">6 месяцев</button>
+              <button type="button" data-id="two" aria-label="6 месяц." class="button tickets__button">6
+                месяцев</button>
             </li>
             <li>
-              <button type="button" data-id="three" class="button tickets__button">12 месяцев</button>
+              <button type="button" data-id="three" aria-label="12 месяц." class="button tickets__button">12
+                месяцев</button>
             </li>
           </ul>
         </div>
@@ -210,16 +214,18 @@
             </li>
           </ul>
         </div>
-        <picture>
-          <source type="image/webp" media="(max-width: 1199px)"
-            srcset="img/weights-tablet@1x.webp 1x, img/weights-tablet@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 1200px)"
-            srcset="img/weights-desktop@1x.webp 1x, img/weights-desktop@2x.webp 2x">
+        <div class="tickets__box">
+          <picture>
+            <source type="image/webp" media="(max-width: 1199px)"
+              srcset="img/weights-tablet@1x.webp 1x, img/weights-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1200px)"
+              srcset="img/weights-desktop@1x.webp 1x, img/weights-desktop@2x.webp 2x">
 
-          <!-- 1х: 287px; 2x: 574px -->
-          <img src="img/weights-desktop@1x.png" srcset="img/weights-desktop@2x.png 2x" alt="Блины от штанги."
-            width="287" height="494">
-        </picture>
+            <!-- 1х: 287px; 2x: 574px -->
+            <img src="img/weights-desktop@1x.png" srcset="img/weights-desktop@2x.png 2x" alt="Блины от штанги."
+              width="287" height="494">
+          </picture>
+        </div>
       </div>
     </section>
 
@@ -244,25 +250,28 @@
         <p>Ежегодные соревнования по CrossFit</p>
         <a class="button" href="#">заполнить заявку</a>
       </div>
-      <picture>
-        <source type="image/webp" media="(max-width: 767px)"
-          srcset="img/crossfit-mobile@1x.webp 1x, img/crossfit-mobile@2x.webp 2x">
-        <source type="image/webp" media="(max-width: 1199px)"
-          srcset="img/crossfit-tablet@1x.webp 1x, img/crossfit-tablet@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 1200px)"
-          srcset="img/crossfit-desktop@1x.webp 1x, img/crossfit-desktop@2x.webp 2x">
+      <div>
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)"
+            srcset="img/crossfit-mobile@1x.webp 1x, img/crossfit-mobile@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1199px)"
+            srcset="img/crossfit-tablet@1x.webp 1x, img/crossfit-tablet@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 1200px)"
+            srcset="img/crossfit-desktop@1x.webp 1x, img/crossfit-desktop@2x.webp 2x">
 
-        <!-- 1х: 660px; 2x: 1320px -->
-        <img src="img/crossfit-desktop@1x.jpg" srcset="img/crossfit-desktop@2x.jpg 2x" alt="Бегущий мужчина."
-          width="660" height="500">
-      </picture>
+          <!-- 1х: 660px; 2x: 1320px -->
+          <img src="img/crossfit-desktop@1x.jpg" srcset="img/crossfit-desktop@2x.jpg 2x" alt="Бегущий мужчина."
+            width="660" height="500">
+        </picture>
+      </div>
     </section>
 
     <section class="coachs">
       <h3 class="title">Тренеры</h3>
       <div class="coachs__buttons">
-        <button type="button" class="slider-button coachs-button-prev"></button>
-        <button type="button" class="slider-button slider-button--next coachs-button-next"></button>
+        <button type="button" aria-label="Кнопка назад." class="slider-button coachs-button-prev"></button>
+        <button type="button" aria-label="Кнопка вперед."
+          class="slider-button slider-button--next coachs-button-next"></button>
       </div>
       <div class="coachs__swiper swiper">
         <div class="coachs__wrap swiper-wrapper">
@@ -293,7 +302,7 @@
               <source type="image/webp" srcset="img/slider/coach-alexey@1x.webp 1x, img/slider/coach-alexey@2x.webp 2x">
               <!-- 1х: 260px; 2x: 520px -->
               <img src="img/slider/coach-alexey@1x.jpg" srcset="img/slider/coach-alexey@2x.jpg 2x"
-                alt="Тренер Анна Павлова." width="260" height="294">
+                alt="Тренер Алексей Лавров." width="260" height="294">
             </picture>
           </article>
           <article class="coachs__card swiper-slide">
@@ -309,7 +318,7 @@
                 srcset="img/slider/coach-aleksandr@1x.webp 1x, img/slider/coach-aleksandr@2x.webp 2x">
               <!-- 1х: 260px; 2x: 520px -->
               <img src="img/slider/coach-aleksandr@1x.jpg" srcset="img/slider/coach-aleksandr@2x.jpg 2x"
-                alt="Тренер Анна Павлова." width="260" height="294">
+                alt="Тренер Александр Пашков." width="260" height="294">
             </picture>
           </article>
           <article class="coachs__card swiper-slide">
@@ -324,7 +333,7 @@
               <source type="image/webp" srcset="img/slider/coach-maria@1x.webp 1x, img/slider/coach-maria@2x.webp 2x">
               <!-- 1х: 260px; 2x: 520px -->
               <img src="img/slider/coach-maria@1x.jpg" srcset="img/slider/coach-maria@2x.jpg 2x"
-                alt="Тренер Анна Павлова." width="260" height="294">
+                alt="Тренер Мария Кетова." width="260" height="294">
             </picture>
           </article>
           <article class="coachs__card swiper-slide">
@@ -387,6 +396,70 @@
                 alt="Тренер Анна Павлова." width="260" height="294">
             </picture>
           </article>
+          <article class="coachs__card swiper-slide">
+            <h4>Александр Пашков</h4>
+            <span>CrossFit</span>
+            <ul>
+              <li>Certified Level 3 Trainer</li>
+              <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+              <li>Опыт — 6 лет</li>
+            </ul>
+            <picture>
+              <source type="image/webp"
+                srcset="img/slider/coach-aleksandr@1x.webp 1x, img/slider/coach-aleksandr@2x.webp 2x">
+              <!-- 1х: 260px; 2x: 520px -->
+              <img src="img/slider/coach-aleksandr@1x.jpg" srcset="img/slider/coach-aleksandr@2x.jpg 2x"
+                alt="Тренер Александр Пашков." width="260" height="294">
+            </picture>
+          </article>
+          <article class="coachs__card swiper-slide">
+            <h4>Александр Пашков</h4>
+            <span>CrossFit</span>
+            <ul>
+              <li>Certified Level 3 Trainer</li>
+              <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+              <li>Опыт — 6 лет</li>
+            </ul>
+            <picture>
+              <source type="image/webp"
+                srcset="img/slider/coach-aleksandr@1x.webp 1x, img/slider/coach-aleksandr@2x.webp 2x">
+              <!-- 1х: 260px; 2x: 520px -->
+              <img src="img/slider/coach-aleksandr@1x.jpg" srcset="img/slider/coach-aleksandr@2x.jpg 2x"
+                alt="Тренер Александр Пашков." width="260" height="294">
+            </picture>
+          </article>
+          <article class="coachs__card swiper-slide">
+            <h4>Александр Пашков</h4>
+            <span>CrossFit</span>
+            <ul>
+              <li>Certified Level 3 Trainer</li>
+              <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+              <li>Опыт — 6 лет</li>
+            </ul>
+            <picture>
+              <source type="image/webp"
+                srcset="img/slider/coach-aleksandr@1x.webp 1x, img/slider/coach-aleksandr@2x.webp 2x">
+              <!-- 1х: 260px; 2x: 520px -->
+              <img src="img/slider/coach-aleksandr@1x.jpg" srcset="img/slider/coach-aleksandr@2x.jpg 2x"
+                alt="Тренер Александр Пашков." width="260" height="294">
+            </picture>
+          </article>
+          <article class="coachs__card swiper-slide">
+            <h4>Александр Пашков</h4>
+            <span>CrossFit</span>
+            <ul>
+              <li>Certified Level 3 Trainer</li>
+              <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+              <li>Опыт — 6 лет</li>
+            </ul>
+            <picture>
+              <source type="image/webp"
+                srcset="img/slider/coach-aleksandr@1x.webp 1x, img/slider/coach-aleksandr@2x.webp 2x">
+              <!-- 1х: 260px; 2x: 520px -->
+              <img src="img/slider/coach-aleksandr@1x.jpg" srcset="img/slider/coach-aleksandr@2x.jpg 2x"
+                alt="Тренер Александр Пашков." width="260" height="294">
+            </picture>
+          </article>
         </div>
       </div>
     </section>
@@ -406,7 +479,7 @@
                 <p>Занимайтесь без очередей и&nbsp;толпучки</p>
               </div>
             </li>
-            <li class="advantages__item ">
+            <li class="advantages__item">
               <div>
                 <span>70</span>
                 <p>машин</p>
@@ -491,7 +564,8 @@
             <picture>
               <source type="image/webp" srcset="img/avatar-anna@1x.webp 1x, img/avatar-anna@2x.webp 2x">
               <!-- 1х: 80px; 2x: 160px -->
-              <img src="img/avatar-anna@1x.png" srcset="img/avatar-anna@2x.png 2x" alt="аватар." width="80" height="80">
+              <img src="img/avatar-anna@1x.png" srcset="img/avatar-anna@2x.png 2x" alt="аватар Анны Орловой." width="80"
+                height="80">
             </picture>
             <div class="reviews__inner">
               <h4>Анна Орлова</h4>
@@ -505,7 +579,8 @@
             <picture>
               <source type="image/webp" srcset="img/avatar-anna@1x.webp 1x, img/avatar-anna@2x.webp 2x">
               <!-- 1х: 80px; 2x: 160px -->
-              <img src="img/avatar-anna@1x.png" srcset="img/avatar-anna@2x.png 2x" alt="аватар." width="80" height="80">
+              <img src="img/avatar-anna@1x.png" srcset="img/avatar-anna@2x.png 2x" alt="аватар Анны Орловой." width="80"
+                height="80">
             </picture>
             <div class="reviews__inner">
               <h4>Анна Орлова</h4>
@@ -519,7 +594,8 @@
             <picture>
               <source type="image/webp" srcset="img/avatar-anna@1x.webp 1x, img/avatar-anna@2x.webp 2x">
               <!-- 1х: 80px; 2x: 160px -->
-              <img src="img/avatar-anna@1x.png" srcset="img/avatar-anna@2x.png 2x" alt="аватар." width="80" height="80">
+              <img src="img/avatar-anna@1x.png" srcset="img/avatar-anna@2x.png 2x" alt="аватар Анны Орловой." width="80"
+                height="80">
             </picture>
             <div class="reviews__inner">
               <h4>Анна Орлова</h4>
@@ -531,8 +607,9 @@
           </li>
         </ul>
         <div class="reviews__buttons">
-          <button type="button" class="slider-button swiper-button-prev"></button>
-          <button type="button" class="slider-button slider-button--next  swiper-button-next"></button>
+          <button type="button" aria-label="Кнопка назад." class="slider-button swiper-button-prev"></button>
+          <button type="button" aria-label="Кнопка вперед."
+            class="slider-button slider-button--next  swiper-button-next"></button>
         </div>
       </div>
     </section>
@@ -545,11 +622,12 @@
             <form class="form" action="https://echo.htmlacademy.ru" method="post">
               <div class="form__label">
                 <label for="user-name"></label>
-                <input type="text" name="name" id="user-name" placeholder="Имя" required>
+                <input type="text" name="name" minlength="1" id="user-name" placeholder="Имя" required>
               </div>
               <div class="form__label">
                 <label for="user-phone"></label>
-                <input type="tel" name="phone" id="user-phone" placeholder="Телефон" required>
+                <input data-phone="phone" type="tel" name="phone" minlength="11" maxlength="11" id="user-phone"
+                  placeholder="Телефон" required>
               </div>
               <button class="button" type="submit">Отправить</button>
             </form>
@@ -632,8 +710,8 @@
         </ul>
       </div>
     </div>
-
   </footer>
+
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 

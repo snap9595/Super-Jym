@@ -119,10 +119,12 @@
 
 .gym__inner img {
   display: block;
-  width: 100%;
+  width: 660px;
   object-fit: cover;
+  background-color: $color-dark-grey;
 
   @include vp-1199 {
+    width: 100%;
     height: 345px;
   }
 
@@ -193,6 +195,7 @@
   right: 0;
   bottom: 0;
   object-fit: cover;
+  background-color: $color-dark-grey;
 
   @include vp-767 {
     width: 100%;
@@ -218,6 +221,10 @@
   background-size: contain;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
 
   @include vp-1199 {
     top: 46px;

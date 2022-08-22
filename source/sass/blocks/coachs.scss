@@ -3,7 +3,11 @@
   max-width: 1160px;
   margin: 0 auto;
   margin-bottom: 120px;
-  padding-top: 17px;
+  padding-top: 16px;
+
+  @include vp-1329 {
+    max-width: 1100px;
+  }
 
   @include vp-1279 {
     padding-left: 20px;
@@ -19,7 +23,7 @@
   }
 
   @include vp-767 {
-    max-width: 226px;
+    max-width: 227px;
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 70px;
@@ -34,7 +38,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 3px;
+    margin-bottom: 5px;
   }
 }
 
@@ -57,18 +61,33 @@
   align-items: center;
   width: 260px;
   height: 294px;
-  background: $color-sapphire-blue--89;
+  margin-right: 40px;
+
+  @include vp-1199 {
+    margin-right: 30px;
+  }
+
 
   @include vp-767 {
     height: 274px;
   }
 }
 
+.coachs__card::before {
+  position: absolute;
+  content: "";
+  top: -1px;
+  left: -2px;
+  right: 2px;
+  bottom: 1px;
+  background-color: $color-sapphire-blue--89;
+}
+
 .coachs__card h4 {
   position: absolute;
   z-index: 2;
   bottom: 0;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
   font-weight: 700;
   font-size: 1.13rem;
   line-height: 150%;
@@ -76,6 +95,7 @@
 }
 
 .coachs__card span {
+  z-index: 1;
   margin-top: 75px;
   line-height: 150%;
   color: $color-spindle-grey;
@@ -86,18 +106,19 @@
 }
 
 .coachs__card ul {
+  z-index: 1;
   overflow-y: auto;
   margin-top: 33px;
   padding: 0 20px 0 69px;
 
   @include vp-767 {
-    margin-top: 33px;
+    margin-top: 31px;
     padding: 0 20px 0 50px;
   }
 }
 
 .coachs__card li {
-  margin-bottom: 12px;
+  margin-bottom: 13px;
   font-size: 0.88rem;
   line-height: 150%;
   color: $color-default-white;
@@ -105,13 +126,14 @@
 
 .coachs__card img {
   position: absolute;
-  left: 0;
   z-index: 1;
-  right: 0;
-  top: 0;
+  top: -1px;
+  left: -2px;
+  right: 2px;
+  bottom: 0;
   width: 100%;
   height: 100%;
-  bottom: 0;
+
   object-fit: cover;
 }
 
@@ -122,11 +144,11 @@
 
 .coachs__card:hover h4 {
   bottom: auto;
-  top: 29px;
+  top: 27px;
   left: 55px;
 
   @include vp-767 {
-    top: 19px;
+    top: 17px;
     left: 40px;
   }
 }
@@ -139,10 +161,19 @@
   justify-content: space-between;
   width: 111%;
 
+  @include vp-1329 {
+    left: -51px;
+    width: 109%;
+  }
+
+  @include vp-1279 {
+    left: -35px;
+    width: 106%;
+  }
+
   @include vp-1199 {
     left: -21px;
     top: 206px;
-    width: 106%;
   }
 
   @include vp-767 {

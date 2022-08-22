@@ -3,12 +3,12 @@
   width: 580px;
 
   @include vp-1199 {
-    padding-bottom: 59px;
+    padding-bottom: 46px;
   }
 
   @include vp-767 {
-    padding-bottom: 60px;
     width: 100%;
+    padding-bottom: 45px;
   }
 }
 
@@ -34,12 +34,13 @@
   grid-template-columns: 1fr 1fr;
   gap: 17px 119px;
   padding: 0;
+  padding-bottom: 15px;
   margin: 0;
   margin-left: 120px;
   list-style: none;
 
   @include vp-1199 {
-    gap: 20px 86px;
+    gap: 18px 86px;
     margin-left: 0;
     padding-left: 39px;
   }
@@ -58,14 +59,14 @@
   top: 6px;
   left: 232px;
   width: 1px;
-  height: 102px;
+  height: 78%;
   background-color: $color-light-slate-grey;
 
   @include vp-1199 {
     top: 8px;
     left: 305px;
     width: 1px;
-    height: 129px;
+    height: 79%;
   }
 
   @include vp-767 {
