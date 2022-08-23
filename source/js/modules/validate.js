@@ -1,4 +1,4 @@
-let telInput = document.querySelectorAll('input[type="tel"]');
+let telInput = document.querySelectorAll('[data-phone]');
 
 const addMask = () => {
   for (let i = 0; i < telInput.length; i++) {
