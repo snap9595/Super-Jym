@@ -9,9 +9,9 @@ const addMask = () => {
 
   function initNumber(input) {
     let value = input.value;
-    let re = /[^0-9\-\(\)\+\ ]/gi;
-    if (re.test(value)) {
-      value = value.replace(re, '');
+    let phone = /[^0-9\-\(\)\+\ ]/gi;
+    if (phone.test(value)) {
+      value = value.replace(phone, '');
       input.value = value;
     }
   }
