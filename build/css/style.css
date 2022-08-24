@@ -1220,7 +1220,7 @@ img {
   display: grid;
   -ms-grid-columns: (minmax(300px, 360px))[3];
   grid-template-columns: repeat(3, minmax(300px, 360px));
-  gap: 40px 38px;
+  gap: 40px;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -1552,8 +1552,8 @@ img {
   column-gap: 60px;
   row-gap: 149px;
   padding: 0;
-  padding-left: 73px;
-  padding-right: 73px;
+  padding-right: 71px;
+  padding-left: 74px;
   margin: 0;
   list-style: none;
 }
@@ -1633,7 +1633,7 @@ img {
   grid-row: 1/3;
   width: 240px;
   padding: 53px 20px 20px 16px;
-  margin: 11px 12px 4px 10px;
+  margin: 10px 15px 5px 10px;
   text-align: center;
   color: #ffffff;
   background-color: #1c3374;
@@ -2566,7 +2566,7 @@ img {
   }
 
   .reviews__wrap li {
-    padding: 54px 65px 56px;
+    padding: 54px 65px 57px;
     -webkit-column-gap: 28px;
     -moz-column-gap: 28px;
     column-gap: 28px;
@@ -2608,13 +2608,13 @@ img {
   }
 
   .about-us__wrapper h3 {
-    padding-top: 62px;
+    padding-top: 63px;
     padding-left: 39px;
   }
 
   .form {
     width: 100%;
-    gap: 30px 60px;
+    gap: 29px 60px;
     padding-left: 38px;
     padding-right: 69px;
     margin-top: 27px;
