@@ -72,7 +72,6 @@
 .tickets__wrap ul {
   position: relative;
   display: flex;
-  column-gap: 47px;
   padding: 0;
   margin: 33px 5px 0 0;
   padding-bottom: 9px;
@@ -80,17 +79,31 @@
   border-bottom: 2px solid $color-grey--20;
 
   @include vp-1199 {
-    column-gap: 55px;
     margin-top: 27px;
     margin-right: 2px;
     padding-bottom: 8px;
   }
 
   @include vp-767 {
-    column-gap: 45px;
     margin-top: 19px;
     padding-bottom: 9px;
   }
+}
+
+.tickets__wrap li {
+  margin-right: 46px;
+
+  @include vp-1199 {
+    margin-right: 54px;
+  }
+
+  @include vp-767 {
+    margin-right: 45px;
+  }
+}
+
+.tickets__wrap li:last-child {
+  margin-right: 0;
 }
 
 .tickets__wrap button {

@@ -136,7 +136,7 @@
 .gym__video {
   position: absolute;
   left: 53%;
-  bottom: 120px;
+  top: 288px;
   width: 364px;
   height: 228px;
   transform: translateX(-49%);
@@ -145,6 +145,7 @@
   @include vp-1199 {
     width: 266px;
     height: 167px;
+    top: auto;
     bottom: 100px;
     left: 50%;
     transform: translateX(-50%);
@@ -152,6 +153,7 @@
 
   @include vp-767 {
     position: relative;
+    width: 320px;
     height: 167px;
     margin-top: 39px;
     margin-left: auto;
@@ -159,7 +161,6 @@
     left: auto;
     bottom: auto;
     transform: translateX(0);
-    width: 100%;
   }
 }
 
@@ -261,7 +262,7 @@
   }
 
   @include vp-767 {
-    left: 36px;
+    left: 34px;
   }
 }
 

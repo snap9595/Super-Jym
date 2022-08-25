@@ -1,6 +1,8 @@
 const tabs = document.querySelector('.tickets');
 const cards = document.querySelectorAll('.tickets__inner');
 const buttons = document.querySelectorAll('.tickets__button');
+const coachesSlide = document.querySelector('.coachs__card');
+const slide = document.querySelector('[data-slide]');
 
 const addTabs = () => {
 
@@ -26,6 +28,11 @@ const addTabs = () => {
       }
     });
   }
+
+  coachesSlide.addEventListener('focus', () => {
+    slide.focus();
+  });
+
 };
 
 export {addTabs};

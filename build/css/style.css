@@ -963,7 +963,7 @@ img {
 .gym__video {
   position: absolute;
   left: 53%;
-  bottom: 120px;
+  top: 288px;
   width: 364px;
   height: 228px;
   -webkit-transform: translateX(-49%);
@@ -1068,18 +1068,11 @@ img {
   text-align: right;
 }
 
-.description__box {
-  display: -webkit-box;
-  display: -ms-flexbox;
+/* .description__box {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
   align-items: flex-end;
-}
+} */
 
 .description h2 {
   margin: 0;
@@ -1092,13 +1085,14 @@ img {
 }
 
 .description ul {
+  position: absolute;
+  top: 180px;
+  right: 264px;
   padding: 0;
   font-size: 0.88rem;
   line-height: 150%;
   list-style: none;
   text-align: right;
-  margin-right: -32px;
-  margin-bottom: 26px;
 }
 
 .description a {
@@ -1165,14 +1159,19 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 47px;
-  -moz-column-gap: 47px;
-  column-gap: 47px;
   padding: 0;
   margin: 33px 5px 0 0;
   padding-bottom: 9px;
   list-style: none;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+}
+
+.tickets__wrap li {
+  margin-right: 46px;
+}
+
+.tickets__wrap li:last-child {
+  margin-right: 0;
 }
 
 .tickets__wrap button {
@@ -1309,24 +1308,24 @@ img {
 }
 
 .cross-fit {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 662px;
-  grid-template-columns: 1fr 662px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   min-height: 500px;
   margin-bottom: 100px;
 }
 
 .cross-fit img {
   background-color: rgba(16, 38, 84, 0.89);
-  height: auto;
+  min-width: 100%;
+  min-height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  width: 100%;
 }
 
 .cross-fit__inner {
-  padding: 81px 78px 58px 75px;
+  width: 498px;
+  padding: 81px 78px 86px 75px;
   color: #ffffff;
   background-color: #ed0233;
 }
@@ -1503,7 +1502,12 @@ img {
   z-index: -1;
 }
 
-.coachs__card:hover h4 {
+.coachs__card:focus img {
+  z-index: -1;
+}
+
+.coachs__card:hover h4,
+.coachs__card:focus h4 {
   bottom: auto;
   top: 27px;
   left: 55px;
@@ -1665,16 +1669,26 @@ img {
   margin-bottom: 118px;
 }
 
-.season-ticket ul {
+.season-ticket__wrap {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-auto-flow: row dense;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  margin-top: 52px;
+  gap: 40px;
+}
+
+.season-ticket__wrap ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
   gap: 40px 37px;
   padding: 0;
-  margin-top: 52px;
-  margin-bottom: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -1682,13 +1696,23 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: #ffffff;
+  min-height: 462px;
+}
+
+.season-ticket__unlim {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 278px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 280px;
   padding: 34px 45px 45px 43px;
-  color: #ffffff;
   background-color: #ed0233;
 }
 
@@ -1740,32 +1764,20 @@ img {
   line-height: 120%;
 }
 
-.season-ticket__item p {
+.season-ticket__wrap p {
   margin-top: 7px;
   line-height: 138%;
 }
 
-.season-ticket__item--unlim {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-grid-row-span: 2;
-  grid-row: span 2;
-  padding: 0;
-  border: none;
-}
-
-.season-ticket__item--unlim img {
+.season-ticket__inner img {
   background-color: #103aae;
-  width: 280px;
-  height: 462px;
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
-.season-ticket__item--unlim a {
+.season-ticket__unlim a {
   display: inline-block;
   margin-top: auto;
   padding: 0;
@@ -1776,12 +1788,12 @@ img {
   border-bottom: 1px solid #ffffff;
 }
 
-.season-ticket__item--unlim a:hover {
+.season-ticket__unlim a:hover {
   color: #b6bdcc;
   border-bottom: 1px solid #b6bdcc;
 }
 
-.season-ticket__item--unlim p {
+.season-ticket__unlim p {
   margin-top: 32px;
   font-size: 1.13rem;
   line-height: 140%;
@@ -1839,6 +1851,16 @@ img {
   margin: 0;
   margin-top: 12px;
   line-height: 140%;
+}
+
+.reviews__inner p::before {
+  content: "\00AB";
+  font-family: "Arial", "Helvetica", sans-serif;
+}
+
+.reviews__inner p::after {
+  content: "\00BB";
+  font-family: "Arial", "Helvetica", sans-serif;
 }
 
 .reviews__buttons {
@@ -2146,6 +2168,10 @@ img {
     padding-right: 20px;
   }
 
+  .description ul {
+    right: 242px;
+  }
+
   .coachs {
     padding-left: 20px;
     padding-right: 20px;
@@ -2251,6 +2277,7 @@ img {
   .gym__video {
     width: 266px;
     height: 167px;
+    top: auto;
     bottom: 100px;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -2290,8 +2317,8 @@ img {
   }
 
   .description ul {
-    margin-right: -22px;
-    margin-bottom: 16px;
+    top: 121px;
+    right: 212px;
   }
 
   .description a {
@@ -2318,12 +2345,13 @@ img {
   }
 
   .tickets__wrap ul {
-    -webkit-column-gap: 55px;
-    -moz-column-gap: 55px;
-    column-gap: 55px;
     margin-top: 27px;
     margin-right: 2px;
     padding-bottom: 8px;
+  }
+
+  .tickets__wrap li {
+    margin-right: 54px;
   }
 
   .tickets__wrap button {
@@ -2350,20 +2378,17 @@ img {
   }
 
   .cross-fit {
-    -ms-grid-columns: 1fr 386px;
-    grid-template-columns: 1fr 386px;
     min-height: 292px;
   }
 
   .cross-fit img {
-    width: 386px;
+    min-width: 386px;
     height: 292px;
   }
 
   .cross-fit__inner {
-    padding: 48px 45px;
-    padding-right: 46px;
-    padding-top: 44px;
+    width: 100%;
+    padding: 44px 46px 49px 45px;
   }
 
   .cross-fit__inner p {
@@ -2514,44 +2539,39 @@ img {
     margin-bottom: 99px;
   }
 
-  .season-ticket ul {
-    -ms-grid-rows: (-webkit-min-content)[3];
-    -ms-grid-rows: (min-content)[3];
-    grid-template-rows: repeat(3, -webkit-min-content);
-    grid-template-rows: repeat(3, min-content);
+  .season-ticket__wrap {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
     margin-top: 41px;
+    row-gap: 30px;
+  }
+
+  .season-ticket__wrap ul {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
 
-  .season-ticket__inner {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    padding-top: 33px;
-    padding-left: 44px;
+  .season-ticket__unlim {
+    width: 100%;
+    padding-left: 45px;
+    padding-right: 40px;
   }
 
   .season-ticket__item a {
     margin-top: 32px;
   }
 
-  .season-ticket__item p {
+  .season-ticket__wrap p {
     min-height: 44px;
   }
 
-  .season-ticket__item--unlim {
-    -ms-grid-row-span: 2;
-    grid-row: span 2;
-    -ms-grid-column-span: 2;
-    grid-column: span 2;
-  }
-
-  .season-ticket__item--unlim img {
-    width: 399px;
+  .season-ticket__inner img {
+    min-width: 399px;
     height: 462px;
   }
 
-  .season-ticket__item--unlim a {
+  .season-ticket__unlim a {
     margin-top: auto;
   }
 
@@ -2760,6 +2780,7 @@ img {
 
   .gym__video {
     position: relative;
+    width: 320px;
     height: 167px;
     margin-top: 39px;
     margin-left: auto;
@@ -2769,7 +2790,6 @@ img {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
-    width: 100%;
   }
 
   .gym__box img {
@@ -2786,7 +2806,7 @@ img {
   }
 
   .gym__box button::after {
-    left: 36px;
+    left: 34px;
   }
 
   .description p {
@@ -2799,8 +2819,8 @@ img {
   }
 
   .description ul {
-    margin-right: -36px;
-    margin-bottom: 12px;
+    top: 109px;
+    right: 176px;
   }
 
   .description a {
@@ -2825,11 +2845,12 @@ img {
   }
 
   .tickets__wrap ul {
-    -webkit-column-gap: 45px;
-    -moz-column-gap: 45px;
-    column-gap: 45px;
     margin-top: 19px;
     padding-bottom: 9px;
+  }
+
+  .tickets__wrap li {
+    margin-right: 45px;
   }
 
   .tickets__wrap button {
@@ -2887,8 +2908,10 @@ img {
   }
 
   .cross-fit {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     margin-bottom: 68px;
   }
 
@@ -2934,7 +2957,8 @@ img {
     padding: 0 20px 0 50px;
   }
 
-  .coachs__card:hover h4 {
+  .coachs__card:hover h4,
+  .coachs__card:focus h4 {
     top: 17px;
     left: 40px;
   }
@@ -3018,16 +3042,30 @@ img {
     margin-bottom: 70px;
   }
 
-  .season-ticket ul {
+  .season-ticket__wrap {
+    margin-top: 44px;
+    row-gap: 31px;
+  }
+
+  .season-ticket__wrap ul {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    -ms-grid-rows: auto;
-    grid-template-rows: auto;
-    margin-top: 43px;
   }
 
   .season-ticket__inner {
     width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .season-ticket__unlim {
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-right: 45px;
   }
 
   .season-ticket__inner h4 {
@@ -3043,28 +3081,17 @@ img {
     text-align: center;
   }
 
-  .season-ticket__item p {
+  .season-ticket__wrap p {
     margin-top: 9px;
     margin-bottom: 14px;
   }
 
-  .season-ticket__item--unlim {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    grid-column: auto;
-    padding-top: 0;
-  }
-
-  .season-ticket__item--unlim img {
+  .season-ticket__inner img {
     min-width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
     height: auto;
   }
 
-  .season-ticket__item--unlim a {
+  .season-ticket__unlim a {
     display: block;
     vertical-align: baseline;
     margin-left: auto;
@@ -3072,8 +3099,8 @@ img {
     margin-top: 0;
   }
 
-  .season-ticket__item--unlim p {
-    margin-top: 28px;
+  .season-ticket__unlim p {
+    margin-top: 26px;
     margin-bottom: 30px;
     text-align: center;
   }

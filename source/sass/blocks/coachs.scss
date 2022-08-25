@@ -141,8 +141,13 @@
   z-index: -1;
 }
 
+.coachs__card:focus img {
+  z-index: -1;
+}
 
-.coachs__card:hover h4 {
+
+.coachs__card:hover h4,
+.coachs__card:focus h4 {
   bottom: auto;
   top: 27px;
   left: 55px;
