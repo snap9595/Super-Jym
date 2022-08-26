@@ -102,6 +102,10 @@
   font-weight: 300;
   line-height: 150%;
 
+  @include vp-1279 {
+    padding-right: 15px;
+  }
+
   @include vp-1199 {
     text-align: center;
     padding-left: 70px;
